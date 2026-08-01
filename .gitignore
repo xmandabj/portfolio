@@ -1,0 +1,9 @@
+# Keep only the portfolio site — ignore stray personal docs dropped in this folder
+/*.pdf
+/*.xlsx
+/*.xls
+/*.docx
+/*.doc
+/*.drawio
+/*.zip
+/flow_screening.png
