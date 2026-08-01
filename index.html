@@ -1,784 +1,474 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ben · AI Researcher · AI/Digital Product Manager · Digital Transformation Consultant · GTM Strategist</title>
+<title>Ben OS · AI Product Command Center — Rujirach "Ben" Kanjarin</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=Noto+Serif+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/dossier.css" />
-<link rel="stylesheet" href="css/mockups.css" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/benos.css" />
 </head>
 <body>
-
 <template id="__bundler_thumbnail">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-<rect width="100" height="100" fill="#1f5dff"/>
-<text x="50" y="62" font-family="Georgia, serif" font-size="42" fill="#ffffff" text-anchor="middle" font-style="italic">B</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#05070d"/><circle cx="50" cy="50" r="26" fill="none" stroke="#3d84ff" stroke-width="2"/><circle cx="50" cy="50" r="7" fill="#3d84ff"/><text x="50" y="86" font-family="Georgia, serif" font-size="14" fill="#eaf1fb" text-anchor="middle">BEN OS</text></svg>
 </template>
 
-<div class="progress"></div>
+<div class="prog"></div>
+<canvas class="quake" id="quake" aria-hidden="true"></canvas>
+<div class="flash" id="flash" aria-hidden="true"></div>
 
-<div class="ocean-bg" aria-hidden="true">
-  <div class="bg-photo sea"></div>
-  <div class="bg-color"></div>
-  <div class="bg-veil"></div>
-</div>
-
-<div class="mountain-bg" aria-hidden="true">
-  <div class="bg-photo mtn"></div>
-  <div class="mb-drift"></div>
-  <div class="bg-color"></div>
-  <div class="bg-veil"></div>
-</div>
-
-<!-- ============================ TOP BAR ============================ -->
-<header class="topbar">
-  <a class="tb-mark" href="#top"><span class="rec"></span><span><b>Portfolio</b></span></a>
-  <nav class="tb-nav">
-    <a href="#dossier">About me</a>
-    <a href="#ops">Experiences</a>
-    <a href="#skills">Skills</a>
-    <a href="#edu">Education</a>
-    <a href="#contact">Contact</a>
+<header class="nav">
+  <a class="nav-mark" href="#top"><span class="pulse"></span><b>Ben&nbsp;OS</b> · Command Center</a>
+  <nav class="nav-links">
+    <a href="#system">System</a><a href="#metrics">Metrics</a><a href="#missions">Missions</a><a href="#capability">Capability</a><a href="#record">Record</a><a href="#contact">Contact</a>
   </nav>
-  <div class="tb-right">
-    <span class="tb-clock" data-clock>0000-00-00 00:00:00</span>
-    <button class="lang-tog" aria-label="Switch language" title="EN / ไทย"><span class="lt-en">EN</span><span class="lt-th">ไทย</span></button>
-    <button class="tb-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-right">
+    <button class="theme-tog" id="themeTog" aria-label="Toggle light or dark mode"><i></i><span>Dark</span></button>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<div class="mscrim"></div>
-<aside class="mmenu">
-  <a href="#dossier">About me</a>
-  <a href="#ops">Experiences</a>
-  <a href="#skills">Skills</a>
-  <a href="#edu">Education</a>
-  <a href="#contact">Contact</a>
-</aside>
+<!-- ============ HERO ============ -->
+<section class="hero cine" id="top">
+  <canvas id="neural"></canvas>
+  <div class="hero-glow"></div>
+  <div class="cine-grid" aria-hidden="true"></div>
+  <div class="hero-vig"></div>
 
-<!-- ============================ HERO / FEED ============================ -->
-<section class="hero" id="top">
-  <div class="wrap">
-    <div class="feed">
-      <img class="feed-img on" src="assets/ben-hero-acc.jpg" alt="Subject — surveillance feed" style="object-position:38% 42%" />
-      <div class="feed-scan"></div>
-      <div class="feed-sweep"></div>
-      <div class="feed-noise"></div>
+  <div class="cine-stage" id="cineStage">
+    <div class="arm a-tl" aria-hidden="true"><img src="assets/arm-tl.png" alt="" /><span class="brk"></span></div>
+    <div class="arm a-tr" aria-hidden="true"><img src="assets/arm-tr.png" alt="" /><span class="brk"></span></div>
+    <div class="arm a-bl" aria-hidden="true"><img src="assets/arm-bl.png" alt="" /><span class="brk"></span></div>
+    <div class="arm a-br" aria-hidden="true"><img src="assets/arm-br.png" alt="" /><span class="brk"></span></div>
 
-      <div class="feed-hud">
-        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner rb"></span>
+    <h1 class="cine-head"><span class="l">From human</span><span class="r">to AI operator</span></h1>
 
-        <div class="hud-top">
-          <div class="hud-cam"><span class="dot">●</span> LIVE FEED — CAM&nbsp;07 / SECTOR&nbsp;BKK</div>
-          <div class="hud-rec">
-            <span class="hud-time" data-clock>0000-00-00 00:00:00</span>
-            <span class="hud-recdot"><i></i> REC</span>
-          </div>
-        </div>
+    <figure class="cine-fig">
+      <img class="cl c1" src="assets/suit-1.png" alt="Rujirach &quot;Ben&quot; Kanjarin" />
+      <img class="cl c2" src="assets/suit-2.png" alt="Robotic arms assembling the operator suit" />
+      <img class="cl c3" src="assets/suit-3.png" alt="Ben in the assembled AI operator suit" />
+      <span class="fig-glow"></span>
+    </figure>
 
-        <div class="reticle r1"><span class="rl">Subject Identified</span><span class="x c"></span></div>
-        <div class="reticle r2"><span class="rl">Asset · Folio</span></div>
-      </div>
 
-      <!-- subject identified card -->
-      <div class="subject">
-        <div class="sj-h"><span>Subject ID</span><span>R-2727</span></div>
-        <img class="sj-img" src="assets/ben-mug-color.jpg" alt="Subject identified" />
-        <div class="sj-id">ID : R-2727-07 · CONFIRMED</div>
-      </div>
-
-      <!-- dossier overlay -->
-      <div class="dpanel">
-        <div class="dp-h"><span>Short Profile</span><span>TOP PRIORITY</span></div>
-        <div class="dp-b">
-          <div class="row"><span class="k">SUBJECT:</span> Rujirach "Ben" Kanjarin</div>
-          <div class="row"><span class="k">STATUS:</span> Available for consulting</div>
-          <div class="row"><span class="k">OBJECT:</span> AI Researcher / Digital PM / GTM</div>
-          <div class="row"><span class="k">LEGEND:</span> Turns ideas into shipped products.</div>
-          <div class="row"><span class="k">ACCESS:</span> Freelance &amp; consulting — open</div>
-          <a class="dp-more" href="#dossier"><span>DETAILED INFORMATION</span><span>→</span></a>
-        </div>
-      </div>
-    </div>
+    <div class="cine-status"><span class="pulse"></span><b id="cineState">System calm</b><span class="bar"><i id="cineBar"></i></span><span id="cinePct">00%</span></div>
   </div>
 
-  <!-- headline band -->
-  <div class="wrap headline">
-    <div class="meta rv">
-      <span>6+ years experience</span><span>Retail · Fintech</span><span>Life Insurance</span><span>Health-tech</span><span>CRM · Enterprise</span><span>Government</span>
-    </div>
-    <h1 class="rv d1">Rujirach Kanjarin <em>(Ben)</em></h1>
-    <p class="role-title rv d1">AI Researcher · AI/Digital Product Manager · Digital Transformation Consultant · GTM Strategist</p>
-    <div class="sub">
-      <p class="lede rv d2">
-        I turn ideas into <strong>working products</strong>. Product strategy, ownership and
-        system analysis &mdash; from the first idea all the way to launch.
-      </p>
-      <div class="acts rv d2">
-        <a class="btn btn-primary" href="#ops">View experiences <span class="arw">↗</span></a>
-        <a class="btn btn-ghost" href="#contact">Contact me</a>
-      </div>
-    </div>
+  <div class="wrap cine-bottom">
+    <h2 class="cine-name rv">Rujirach <em>“Ben”</em> Kanjarin</h2>
   </div>
 </section>
 
-<div class="ticker">
-  <div class="ticker-flag"><span class="tk-dot"></span>Live Wire</div>
-  <div class="ticker-view">
-    <div class="ticker-track">
-      <span>6+ years turning tangled ideas into shipped products</span><span>1st Runner-Up · Lovable Hackathon Thailand</span><span>Working product built in under 2 hours — live on stage</span><span>Built CP Axtra · Makro retail platforms from zero</span><span>Fund-management logic trusted by MUFG &amp; State Street</span><span>10+ client projects · 100% on-time · zero post-go-live defects</span><span>Summa Cum Laude · GPA 3.89 / 4.00</span><span>Selected for NIA ACC Program 3 · AI Tech Talent</span><span>Now reading an AI MBA at UTCC</span><span>From first idea to live release — she carries it</span><span>Status: available for hire</span>
-      <span>6+ years turning tangled ideas into shipped products</span><span>1st Runner-Up · Lovable Hackathon Thailand</span><span>Working product built in under 2 hours — live on stage</span><span>Built CP Axtra · Makro retail platforms from zero</span><span>Fund-management logic trusted by MUFG &amp; State Street</span><span>10+ client projects · 100% on-time · zero post-go-live defects</span><span>Summa Cum Laude · GPA 3.89 / 4.00</span><span>Selected for NIA ACC Program 3 · AI Tech Talent</span><span>Now reading an AI MBA at UTCC</span><span>From first idea to live release — she carries it</span><span>Status: available for hire</span>
-    </div>
-  </div>
-</div>
-
-<!-- ============================ DOSSIER ============================ -->
-<section class="dossier sec" id="dossier">
+<!-- ============ METRICS ============ -->
+<section class="sec" id="metrics">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="sh-l">
-        <span class="idx">01 — About me</span>
-        <h2>About <em>Ben</em></h2>
-      </div>
-      <div class="sh-r">Open to work · Available now<br />For hiring managers &amp; clients</div>
+      <div><span class="mono">01 — Telemetry</span><h2>Proof, in <em>numbers</em>.</h2></div>
+      <div class="r big">7+ Years Experience<br /><span>·</span> 5 Industries<br /><span>·</span> 10 Shipped Projects</div>
     </div>
-
-    <div class="doss-grid">
-      <!-- LEFT: ID cards -->
-      <div class="id-cards">
-        <div class="intro-clip rv">
-          <div class="ic-h"><span class="rec"><i></i> REC</span><span>Intro video</span></div>
-          <div class="ic-frame">
-            <video src="assets/ben-intro.mp4" autoplay muted loop playsinline></video>
-            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner rb"></span>
-          </div>
-          <div class="box-cap">A quick hello from Ben</div>
-        </div>
-        <div class="idc rv">
-          <div class="idc-top">
-            <div class="idc-photo">
-              <span class="idc-bar"></span>
-              <img src="assets/ben-mug-color.jpg" alt="ID photo" />
-            </div>
-            <div class="idc-meta">
-              <div class="il">Subject</div><div class="iv">Rujirach Kanjarin</div>
-              <div class="il">Call sign</div><div class="iv b">"Ben"</div>
-              <div class="il">Date of birth</div><div class="iv">27-01-2000</div>
-              <div class="il">Clearance</div><div class="iv b">OPEN / HIRE</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- RIGHT: dossier text -->
-      <div class="doss-body">
-        <div class="doss-seal-bg"></div>
-
-        <div class="doss-head rv">
-          <span class="seal"></span>
-          <div class="dh-t">
-            <div class="a">Product Strategy &amp; System Analysis</div>
-            <div class="b">Professional profile — what I bring to your team</div>
-          </div>
-          <div class="dh-no">Profile № R-2727<br />Status · Available</div>
-        </div>
-
-        <div class="doss-copy rv">For hiring managers &amp; clients — here's exactly how I can help.</div>
-
-        <div class="doss-spec rv">
-          <div class="row"><span class="k">Role</span><span class="v"><b>AI Researcher · AI/Digital Product Manager · Digital Transformation Consultant · GTM Strategist</b></span></div>
-          <div class="row"><span class="k">Known as</span><span class="v">"Ben" — turning ideas into products, systems &amp; growth</span></div>
-          <div class="row"><span class="k">Best at</span><span class="v">Product strategy · business analysis · AI adoption</span></div>
-          <div class="row"><span class="k">Based in</span><span class="v">Bangkok, Thailand</span></div>
-          <div class="row"><span class="k">Languages</span><span class="v">Thai (native) · English (fluent)</span></div>
-        </div>
-
-        <div class="doss-blk rv">
-          <h4>In short</h4>
-          <p>
-            I'm an <strong>AI Researcher, AI/Digital Product Manager, Digital Transformation Consultant
-            and GTM Strategist</strong> who can take an idea from zero to launch <strong>end-to-end</strong>.
-          </p>
-          <p>
-            I can work independently from the very beginning to the final execution: researching the problem,
-            shaping the strategy, defining the product, designing the user flow, planning AI adoption,
-            building or coordinating the prototype, creating the GTM direction, and turning the idea into
-            a real working outcome.
-          </p>
-          <p class="avail-line"><b>Available for:</b> AI Research · AI/Digital Product Management · Digital Transformation · Product Strategy · GTM Strategy · Business Development · End-to-End Execution.</p>
-        </div>
-
-        <div class="doss-blk rv">
-          <h4>Why clients work with me</h4>
-          <ul class="doss-notes">
-            <li>I can own <b>the full journey from idea to execution</b></li>
-            <li>I turn ambiguous business problems into <b>clear product and AI strategies</b></li>
-            <li>I bridge <b>research, product, business, technology &amp; operations</b></li>
-            <li>Comfortable working independently from <b>strategy level down to execution detail</b></li>
-            <li>Proven across <b>corporate transformation</b> and <b>startup zero-to-one</b> projects</li>
-            <li><b>AI-native</b> approach to product, workflow and growth</li>
-          </ul>
-        </div>
+    <div class="proof-map rv">
+      <div class="runner" id="runner"><img src="assets/hero-run-1.png" alt="Ben — evolving from human to AI operator" /></div>
+      <div class="plat-row" id="platRow">
+        <article class="plat" data-stage="0">
+          <img class="plat-sprite" src="assets/hero-run-1.png" alt="" aria-hidden="true" />
+          <span class="plat-pad"></span>
+          <span class="pn">01</span>
+          <div class="pv">0 <span class="arrow">→</span> <span data-count="2">0</span></div>
+          <div class="pu">HRS</div>
+          <div class="pst">Idea to prototype</div>
+          <p class="pd">Idea to working AI prototype, live on stage</p>
+        </article>
+        <article class="plat" data-stage="1">
+          <img class="plat-sprite" src="assets/hero-run-2.png" alt="" aria-hidden="true" />
+          <span class="plat-pad"></span>
+          <span class="pn">02</span>
+          <div class="pv"><span data-count="3">0</span>+ <span class="arrow">→</span> &lt;1</div>
+          <div class="pu">YR</div>
+          <div class="pst">Acceleration</div>
+          <p class="pd">Years delayed → national platform go-live</p>
+        </article>
+        <article class="plat" data-stage="2">
+          <img class="plat-sprite" src="assets/hero-run-3.png" alt="" aria-hidden="true" />
+          <span class="plat-pad"></span>
+          <span class="pn">03</span>
+          <div class="pv">2–3 <span class="arrow">→</span> <span data-count="1">0</span></div>
+          <div class="pu">Platform</div>
+          <div class="pst">Integration</div>
+          <p class="pd">Disconnected systems → one platform</p>
+        </article>
+        <article class="plat" data-stage="3">
+          <img class="plat-sprite" src="assets/hero-run-4.png" alt="" aria-hidden="true" />
+          <span class="plat-pad"></span>
+          <span class="pn">04</span>
+          <div class="pv"><span data-count="5">0</span></div>
+          <div class="pu">Modules</div>
+          <div class="pst">Construction</div>
+          <p class="pd">Platform modules built stand-alone</p>
+        </article>
+        <article class="plat" data-stage="4">
+          <img class="plat-sprite" src="assets/hero-run-5.png" alt="" aria-hidden="true" />
+          <span class="plat-pad"></span>
+          <span class="pn">05</span>
+          <div class="pv">2<i>nd</i></div>
+          <div class="pu">Place</div>
+          <div class="pst">Recognition</div>
+          <p class="pd">1st runner-up — twice, in one year</p>
+        </article>
+        <article class="plat" data-stage="5">
+          <img class="plat-sprite" src="assets/hero-run-6.png" alt="" aria-hidden="true" />
+          <span class="plat-pad"></span>
+          <span class="pn">06</span>
+          <div class="pv">฿<span data-count="5">0</span>M</div>
+          <div class="pu">Funding</div>
+          <div class="pst">Activation</div>
+          <p class="pd">NIA-backed funding pathway unlocked</p>
+        </article>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============================ OPERATIONS ============================ -->
-<section class="sec" id="ops">
+<!-- ============ SYSTEM / OS ============ -->
+<section class="sec alt subsys-sec" id="system">
+  <canvas class="sub-particles" id="subParticles" aria-hidden="true"></canvas>
+  <div class="sub-scan" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="sh-l">
-        <span class="idx">02 — Experiences</span>
-        <h2><em>Experiences</em></h2>
-      </div>
-      <div class="sh-r">All files declassified<br />Tap any record to expand</div>
+      <div><span class="mono">02 — System architecture</span><h2>One operator, <em>four subsystems</em>.</h2></div>
     </div>
-
-    <!-- OP-01 CP AXTRA -->
-    <article class="op open rv">
-      <div class="op-head">
-        <div class="op-code">OP-01<span class="st">Active</span></div>
-        <div>
-          <h3 class="op-co">CP Axtra · Makro</h3>
-          <p class="op-org">The <b>B2B &amp; B2C retail-wholesale arm of CP Group</b> (Makro &amp; Lotus's) — one of Southeast Asia's largest retailers.</p>
-          <p class="op-role">Product Owner · Retail Platforms</p>
-        </div>
-        <span class="op-toggle">+</span>
-      </div>
-      <div class="op-body"><div class="op-body-in"><div class="op-content">
-        <div class="ov">
-          <p>Product Owner for <strong>Commercial Hub</strong> and retail platform modules, driving digital transformation across item management, pricing, promotion workflows and cross-functional platform integration.</p>
-          <p>I worked across legacy systems, business teams, users and platform logic to move fragmented workflows into one centralized platform. Teams previously had to work across <strong>2–3 separate systems</strong>, with unsynced data, manual tracking and disconnected processes. I helped transform those workflows into a single connected platform where data, status, workflow logic and tracking are managed end-to-end.</p>
-        </div>
-        <div class="op-deliver">
-          <h4>What I delivered</h4>
-          <ul>
-            <li>Built and launched <strong>simple promotion modules</strong> within my first few months</li>
-            <li>Independently delivered <strong>4–5 platform modules</strong> shortly after joining</li>
-            <li>Designed and delivered large modules including <strong>NPIC Item Registration</strong> and <strong>NPD Item Creation</strong></li>
-            <li>Built module logic, user flow, data-transformation logic &amp; tracking structure stand-alone</li>
-            <li>Supported real users and improved platform adoption through hands-on usage support</li>
-            <li>Connected fragmented workflows from <strong>2–3 systems</strong> into one centralized platform</li>
-            <li>Reduced manual tracking by unifying data, status and workflow logic in one place</li>
-            <li>Drove cross-functional execution across <strong>Thai teams, international teams, users, developers, business stakeholders and executives</strong> — aligning everyone around one clear platform direction and delivery plan</li>
-          </ul>
-        </div>
-        <div class="kpi">
-          <h4>Big achievement · KPI highlights</h4>
-          <div class="kpi-grid">
-            <div class="kpi-i"><h5>4–5 platform modules built independently</h5><p>Ramped up within only a few months and independently built <strong>4–5 modules</strong> stand-alone — from requirement understanding, module flow and business logic to data transformation, user support and delivery.</p></div>
-            <div class="kpi-i"><h5>2–3 disconnected systems unified into one platform</h5><p>Helped transform workflows that previously required <strong>2–3 separate systems</strong>, manual tracking and unsynced data into one centralized platform with clearer end-to-end visibility.</p></div>
-            <div class="kpi-i"><h5>Large modules delivered on time</h5><p>Designed and delivered major modules including <strong>NPIC Item Registration</strong>, <strong>NPD Item Creation</strong>, promotion modules and other item-management workflows, despite complex business rules and cross-functional dependencies.</p></div>
-            <div class="kpi-i"><h5>Multi-stakeholder delivery across 5+ groups</h5><p>Managed alignment across <strong>Thai teams, international teams, users, developers, business stakeholders and executives</strong> at the same time, translating complex needs into clear product direction and execution plans.</p></div>
-            <div class="kpi-i"><h5>From manual work to trackable digital workflow</h5><p>Replaced fragmented manual processes with structured platform logic, clearer data flow, workflow status tracking and usable modules that support real business operations.</p></div>
-          </div>
-        </div>
-        <div class="op-chips"><span>Retail</span><span>Product Ownership</span><span>Roadmap</span><span>Item Management</span><span>Pricing &amp; Promotion</span><span>Power BI</span><span>SQL</span></div>
-      </div></div></div>
-    </article>
-
-    <!-- OP-02 KLER -->
-    <article class="op open rv">
-      <div class="op-head">
-        <div class="op-code">OP-02<span class="st">Award</span></div>
-        <div>
-          <h3 class="op-co">ACC Program 3 <span class="op-award">★ 1st Runner-Up</span></h3>
-          <p class="op-org"><b>ARI Corporate Coaching Program (NIA)</b>, Public Demo Day — where I built and pitched <b>KLER</b>, AI smart glasses for elderly care.</p>
-          <p class="op-role">Product Lead · KLER · Positioning, Strategy &amp; Pitch</p>
-        </div>
-        <span class="op-toggle">+</span>
-      </div>
-      <div class="op-body"><div class="op-body-in"><div class="op-content">
-        <div class="ov">
-          <p>Built and pitched <strong>KLER</strong>, an elderly-first AI smart glasses concept developed under <strong>ACC Program 3 — ARI Corporate Coaching Program / Public Demo Day</strong>.</p>
-          <p>I joined when the product still lacked a clear positioning and business direction, and shaped KLER from zero into a stronger product and investment narrative: pain point, market opportunity, product positioning, core features, roadmap, business strategy and investment ask.</p>
-          <p>KLER helps older adults live more independently, safely and confidently, while giving families peace of mind through AI-powered care support — with features including <strong>AI Companion, KLER Glasses, Safety AI, Family Connect, Navigator and AI Memory</strong>.</p>
-          <p>I also led the product storytelling and pitch direction — logo and design direction, positioning, business strategy and investor-facing materials. I pitched the product three times and handled business-strategy Q&amp;A on pain points, market opportunity, go-to-market, roadmap and investment planning.</p>
-        </div>
-        <div class="op-deliver">
-          <h4>What I delivered</h4>
-          <ul>
-            <li>Built the product direction &amp; positioning for <strong>KLER</strong> from zero</li>
-            <li>Defined the elderly-care pain point, market opportunity &amp; business strategy</li>
-            <li>Designed the product narrative, logo direction &amp; pitch positioning</li>
-            <li>Developed the core feature set with the team — <strong>AI Companion, Safety AI, Family Connect, Navigator &amp; AI Memory</strong></li>
-            <li>Created the roadmap, go-to-market direction &amp; investment ask</li>
-            <li>Pitched across multiple rounds and handled business-strategy Q&amp;A</li>
-            <li>Helped KLER reach <strong>2nd place / 1st Runner-Up</strong> in the program</li>
-            <li>Earned a <strong>NIA-supported fast-track opportunity to apply for THB 5M funding</strong></li>
-          </ul>
-        </div>
-        <div class="kpi">
-          <h4>Key achievement · KPI highlights</h4>
-          <div class="kpi-grid">
-            <div class="kpi-i"><h5>0 → investor-ready product concept</h5><p>Transformed KLER from an unclear AI smart glasses idea into a complete elderly-care AI companion platform with clear product positioning, business strategy, core features, roadmap, GTM direction and investment narrative.</p></div>
-            <div class="kpi-i"><h5>6 core features defined</h5><p>Shaped KLER around six key elderly-care functions — <strong>AI Companion, KLER Glasses, Safety AI, Family Connect, Navigator and AI Memory</strong> — turning the product from a hardware idea into a full care ecosystem.</p></div>
-            <div class="kpi-i"><h5>3 pitch rounds led</h5><p>Pitched KLER across multiple rounds and answered business-strategy questions covering pain points, market opportunity, product differentiation, roadmap, go-to-market and investment ask.</p></div>
-            <div class="kpi-i"><h5>2nd place / 1st Runner-Up</h5><p>Helped KLER become strong enough to place <strong>2nd</strong> in the ACC Program / Public Demo Day through product clarity, strategy, storytelling and execution.</p></div>
-            <div class="kpi-i"><h5>THB 5M funding pathway</h5><p>Earned a <strong>NIA-supported fast-track opportunity to apply for THB 5M funding</strong>, proving the product direction had moved beyond idea stage into a fundable innovation concept.</p></div>
-            <div class="kpi-i"><h5>No clear positioning → fundable AI care platform</h5><p>Built the product story, positioning, logo and design direction, feature logic, business model, roadmap and investor pitch from zero — turning KLER into a serious AI elderly-care product ready for pilot, partners and funding discussion.</p></div>
-          </div>
-        </div>
-        <div class="case-shots rail">
-          <figure class="shot"><div class="vf" style="border:1px solid var(--line-2)"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br rb"></span><img src="assets/kler-pitch.jpg" alt="Pitching KLER on stage at ACC Program 3 Demo Day" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover" loading="lazy" /></div><figcaption>Pitching KLER — ACC Program 3 Demo Day</figcaption></figure>
-          <figure class="shot"><div class="vf" style="border:1px solid var(--line-2)"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br rb"></span><img src="assets/kler-stage-deck.jpg" alt="Presenting the KLER pitch deck to the room" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover" loading="lazy" /></div><figcaption>Presenting the KLER pitch deck</figcaption></figure>
-          <figure class="shot"><div class="vf" style="border:1px solid var(--line-2)"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br rb"></span><img src="assets/kler-booth.jpg" alt="Presenting KLER at the product booth" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover" loading="lazy" /></div><figcaption>Product booth — KLER smart glasses</figcaption></figure>
-          <figure class="shot"><div class="vf" style="border:1px solid var(--line-2)"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br rb"></span><img src="assets/kler-demo.jpg" alt="Demoing the KLER AI companion to the audience" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover" loading="lazy" /></div><figcaption>Demoing the KLER AI companion</figcaption></figure>
-          <figure class="shot"><div class="vf" style="border:1px solid var(--line-2)"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br rb"></span><img src="assets/kler-award.jpg" alt="Receiving the 2nd place award at ACC Program 3" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover" loading="lazy" /></div><figcaption>Receiving 2nd place — ACC Program 3</figcaption></figure>
-          <figure class="shot"><div class="vf" style="border:1px solid var(--line-2)"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br rb"></span><img src="assets/kler-cert.jpg" alt="Receiving the ACC Program 3 completion certificate" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover" loading="lazy" /></div><figcaption>ACC Program 3 — certificate</figcaption></figure>
-          <figure class="shot"><div class="vf" style="border:1px solid var(--line-2)"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br rb"></span><img src="assets/kler-group.jpg" alt="ACC Program 3 cohort group photo" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover" loading="lazy" /></div><figcaption>ACC Program 3 — full cohort</figcaption></figure>
-        </div>
-        <div class="op-chips"><span>AI Product</span><span>Elderly Care</span><span>Smart Glasses</span><span>Positioning</span><span>GTM</span><span>Investor Pitch</span><span>NIA · ACC Program</span></div>
-      </div></div></div>
-    </article>
-
-    <!-- OP-03 LOVABLE -->
-    <article class="op open rv">
-      <div class="op-head">
-        <div class="op-code">OP-03<span class="st">Award</span></div>
-        <div>
-          <h3 class="op-co">Lovable Vibe Code <span class="op-award">★ 1st Runner-Up</span></h3>
-          <p class="op-org">The <b>first Lovable AI build-hackathon in Thailand</b> — idea to working prototype, live, on stage.</p>
-          <p class="op-role">Founder &amp; Product Lead · AI for SME</p>
-        </div>
-        <span class="op-toggle">+</span>
-      </div>
-      <div class="op-body"><div class="op-body-in"><div class="op-content">
-        <div class="ov">
-          <p>I pitched and built <strong>AI for SME</strong>, an AI business idea designed to help Thai small businesses work smarter. An original idea I researched, shaped, designed, built and pitched from scratch as a stand-alone project.</p>
-          <p>I developed the concept from zero: identifying the SME problem, defining the business model, designing the product and user flow, building a working prototype in about <strong>two hours</strong>, and presenting it on stage to the judges.</p>
-        </div>
-        <div class="op-deliver">
-          <h4>What I did</h4>
-          <ul>
-            <li>Created the <strong>AI for SME</strong> startup idea</li>
-            <li>Defined product &amp; user flow under real time pressure</li>
-            <li>Built a working prototype in <strong>~2 hours</strong></li>
-            <li>Pitched to judges — placed <strong>1st Runner-Up</strong></li>
-          </ul>
-        </div>
-        <div class="kpi">
-          <h4>Big achievement · KPI highlights</h4>
-          <div class="kpi-grid">
-            <div class="kpi-i"><h5>2nd place / 1st Runner-Up</h5><p>Won <strong>1st Runner-Up (2nd Place)</strong> at the first <strong>Lovable AI Build Hackathon in Thailand</strong>, competing from idea stage to live prototype and final pitch.</p></div>
-            <div class="kpi-i"><h5>0 → working prototype in ~2 hours</h5><p>Built <strong>AI for SME</strong> from zero into a working demo within about <strong>two hours</strong>, under real-time hackathon pressure.</p></div>
-            <div class="kpi-i"><h5>100% stand-alone ownership</h5><p>Independently researched, shaped, designed, built and pitched the business idea from scratch — problem discovery, product concept, user flow, prototype and business direction.</p></div>
-            <div class="kpi-i"><h5>AI business idea for Thai SMEs</h5><p>Created an AI product concept designed to help Thai small businesses work smarter, reduce manual work and improve daily business operations.</p></div>
-            <div class="kpi-i"><h5>Pitch-ready product execution</h5><p>Turned a raw idea into a clear startup-style pitch with product logic, target users, business value and a live demo strong enough to win on stage.</p></div>
-          </div>
-        </div>
-        <div class="keyach">
-          <h4>Key achievement</h4>
-          <p>Built and pitched <strong>AI for SME</strong> as a solo, stand-alone project — transforming an original business idea into a working AI prototype in about <strong>two hours</strong> and winning <strong>1st Runner-Up (2nd Place)</strong> at the first Lovable AI Build Hackathon in Thailand.</p>
-        </div>
-        <div class="case-shots rail">
-          <figure class="shot"><div class="vf" style="border:1px solid var(--line-2)"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br rb"></span><img src="assets/lovable-event.jpg" alt="Presenting at Lovable Hackathon Thailand finals" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover" loading="lazy" /></div><figcaption>Presentation &amp; judging — finals</figcaption></figure>
-          <figure class="shot"><div class="vf" style="border:1px solid var(--line-2)"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br rb"></span><img src="assets/lovable-award.jpg" alt="Receiving the 1st Runner-Up award on stage" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover" loading="lazy" /></div><figcaption>Receiving the 1st Runner-Up award</figcaption></figure>
-          <figure class="shot"><div class="vf" style="border:1px solid var(--line-2)"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br rb"></span><img src="assets/lovable-group.jpg" alt="Lovable Meetup &amp; Hackathon Thailand group photo" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover" loading="lazy" /></div><figcaption>Lovable Meetup &amp; Hackathon Thailand — everyone</figcaption></figure>
-        </div>
-        <div class="op-chips"><span>AI Product</span><span>Startup</span><span>AI for SME</span><span>Hackathon</span><span>0 → 1</span><span>Rapid Prototyping</span><span>Pitch</span></div>
-      </div></div></div>
-    </article>
-
-    <!-- OP-04 TELEHEALTH -->
-    <article class="op open rv">
-      <div class="op-head">
-        <div class="op-code">OP-04<span class="st">Archive</span></div>
-        <div>
-          <h3 class="op-co">Telehealth Thailand</h3>
-          <p class="op-org">A <b>national telepharmacy platform under the Pharmacy Council of Thailand</b> — patients consult, pay and receive medication online.</p>
-          <p class="op-role">Project Manager · End-to-End Delivery</p>
-        </div>
-        <span class="op-toggle">+</span>
-      </div>
-      <div class="op-body"><div class="op-body-in"><div class="op-content">
-        <div class="ov">
-          <p>Project management for <strong>Telehealth Thailand</strong> — leading the product and execution plan that turned an online pharmacist-consultation platform into a fully operational end-to-end healthcare service.</p>
-          <p>Before I joined, the application had been in development for several years and could mainly support online consultation with pharmacists. During my first year as Project Manager, I helped push the product from consultation-only into a real working service covering the full journey: <strong>consultation, prescription and medicine workflow, payment collection, medicine delivery and go-live execution</strong>.</p>
-          <p>Through product planning, team coordination, roadmap prioritization and hands-on execution management, I aligned the team around the critical path needed to launch — resulting in a platform that could finally operate end-to-end in the real market.</p>
-          <p>As Project Manager I also managed and coordinated the PO-level execution across <strong>5 core modules</strong>, making sure each module moved in the same product direction and connected properly into the full end-to-end telehealth flow.</p>
-        </div>
-        <div class="op-deliver">
-          <h4>What I delivered</h4>
-          <ul>
-            <li>Led project planning &amp; execution as <strong>Project Manager</strong></li>
-            <li>Turned the platform from consultation-only into a full <strong>end-to-end telehealth service</strong></li>
-            <li>Enabled key workflows for <strong>medicine fulfillment, payment collection &amp; delivery</strong></li>
-            <li>Coordinated cross-functional teams across product, operations, pharmacy &amp; technical execution</li>
-            <li>Prioritized launch-critical features and removed blockers across the project</li>
-            <li>Helped the platform successfully <strong>go live</strong> after years of development</li>
-            <li>Built the execution structure that moved the service from system development into real operation</li>
-            <li>Managed PO-level planning and execution across <strong>5 core modules</strong></li>
-            <li>Coordinated module owners, requirements, dependencies and delivery timelines across the full platform</li>
-            <li>Ensured all 5 modules connected into one complete end-to-end flow, from consultation to payment and medicine delivery</li>
-          </ul>
-        </div>
-        <div class="kpi">
-          <h4>Key achievement · KPI highlights</h4>
-          <div class="kpi-grid">
-            <div class="kpi-i"><h5>3+ years delayed → go-live in under a year</h5><p>After <strong>3+ years of development</strong> without being able to complete the full service flow, I took ownership and helped bring Telehealth Thailand to <strong>go-live within less than one year</strong> — from pharmacist consultation-only to a complete <strong>end-to-end healthcare platform</strong> covering consultation, medicine orders, payment and delivery.</p></div>
-            <div class="kpi-i"><h5>5 core modules managed</h5><p>Oversaw PO-level execution across <strong>5 core modules</strong>, aligning requirements, dependencies, user flows and delivery timelines so the platform could move from consultation-only into a complete end-to-end telehealth service.</p></div>
-          </div>
-        </div>
-        <div class="case-shots site-shots">
-          <figure class="shot">
-            <div class="browser">
-              <div class="b-bar"><span class="b-dots"><i></i><i></i><i></i></span><span class="b-url">telehealththailand.vercel.app</span></div>
-              <div class="site-embed">
-                <iframe data-w="1280" src="https://telehealththailand.vercel.app/" title="Telehealth Thailand — live national platform" loading="lazy" scrolling="no"></iframe>
-                <div class="embed-fallback">Live site preview blocked here<a href="https://telehealththailand.vercel.app/" target="_blank" rel="noopener">Open telehealththailand.vercel.app ↗</a></div>
-              </div>
-            </div>
-            <figcaption>Telehealth Thailand — live national platform</figcaption>
-          </figure>
-        </div>
-        <div class="op-chips"><span>Health-tech</span><span>Partner Integration</span><span>PRD</span><span>API Mapping</span><span>eKYC</span><span>Payment Gateway</span><span>Go-live</span></div>
-      </div></div></div>
-    </article>
-
-    <!-- OP-04 SS&C -->
-    <article class="op open rv">
-      <div class="op-head">
-        <div class="op-code">OP-05<span class="st">Archive</span></div>
-        <div>
-          <h3 class="op-co">SS&amp;C Technologies</h3>
-          <p class="op-org">A <b>NASDAQ-listed global fintech &amp; fund-administration software firm</b> — clients include MUFG and State Street.</p>
-          <p class="op-role">Business System Analyst · HiTrust</p>
-        </div>
-        <span class="op-toggle">+</span>
-      </div>
-      <div class="op-body"><div class="op-body-in"><div class="op-content">
-        <div class="ov">
-          <p>Business System Analyst for <strong>HiTrust</strong>, a global fund-management platform serving international financial clients including <strong>MUFG and State Street</strong>.</p>
-          <p>I worked directly with <strong>international clients and global stakeholders</strong>, translating complex financial requirements into clear system logic, module specifications and delivery-ready documentation — covering client communication, requirement discovery, business analysis, module design, testing support and production release coordination.</p>
-          <p>Beyond standard system analysis, I also proposed and designed <strong>new modules and workflow improvements</strong> the system had not previously supported, expanding product capability and creating stronger business value for clients.</p>
-        </div>
-        <div class="op-deliver">
-          <h4>What I delivered</h4>
-          <ul>
-            <li>Communicated with international clients and global stakeholders</li>
-            <li>Designed modules and proposed new system capabilities</li>
-            <li>Analyzed fund workflows including <strong>NAV, fees, settlement, valuation and fund operations</strong></li>
-            <li>Authored <strong>BRD, CID &amp; SOW</strong> and implementation documentation for sign-off</li>
-            <li>Defined settlement cycles (T+1 / T+2), rounding logic &amp; parameter setup</li>
-            <li>Led SIT/UAT, validated calculations &amp; supported production releases</li>
-            <li>Helped turn client requirements into scalable fintech product modules</li>
-            <li>Contributed to a high-value deal opportunity through strong client-facing analysis and delivery support</li>
-          </ul>
-        </div>
-        <div class="keyach">
-          <h4>Key achievement</h4>
-          <p>Supported international client delivery by designing new system modules, proposing product enhancements and turning complex financial requirements into commercially valuable solutions — strengthening client confidence and supporting a high-value deal opportunity for the business.</p>
-        </div>
-        <div class="kpi">
-          <h4>KPI highlights</h4>
-          <div class="kpi-grid">
-            <div class="kpi-i"><h5>Global client communication</h5><p>Worked directly with international clients and stakeholders across complex fintech and fund-management workflows.</p></div>
-            <div class="kpi-i"><h5>New modules proposed</h5><p>Proposed and designed new modules and workflow improvements that expanded what the system could support.</p></div>
-            <div class="kpi-i"><h5>From requirement → production</h5><p>Owned analysis end to end — requirement gathering, <strong>BRD/CID/SOW</strong> documentation, logic design, SIT/UAT and release support.</p></div>
-            <div class="kpi-i"><h5>High-value business impact</h5><p>Helped support a commercially important client opportunity and contributed to deal confidence through clear module design and delivery alignment.</p></div>
-          </div>
-        </div>
-        <div class="op-chips"><span>Fintech</span><span>Fund Management</span><span>BRD</span><span>Settlement</span><span>NAV</span><span>SIT / UAT</span><span>MUFG</span><span>State Street</span></div>
-      </div></div></div>
-    </article>
-
-    <!-- OP-05 SAW -->
-    <article class="op open rv">
-      <div class="op-head">
-        <div class="op-code">OP-06<span class="st">Archive</span></div>
-        <div>
-          <h3 class="op-co">SAW · HR Application</h3>
-          <p class="op-org">An <b>HR management application (HR-tech)</b> building tools for hiring, people ops and workforce management.</p>
-          <p class="op-role">Product Consultant · Redesign, Roadmap &amp; GTM</p>
-        </div>
-        <span class="op-toggle">+</span>
-      </div>
-      <div class="op-body"><div class="op-body-in"><div class="op-content">
-        <div class="ov">
-          <p>Product consulting for <strong>SAW, an HR management application</strong> — owning the product direction, app redesign, new module planning and go-to-market strategy <strong>from idea to execution</strong>.</p>
-          <p>I led the full <strong>SAW app redesign</strong>, reshaping the product experience across key user groups and creating dashboard modules for <strong>employees, executives and HR teams</strong>. The work covered product structure, user flow, feature prioritization, and how each role should interact with the system more clearly and efficiently.</p>
-          <p>Beyond the redesign, I worked on further product and business initiatives — the <strong>Welfare module</strong>, product roadmap, GTM planning, content strategy, video content direction, and a <strong>referral program</strong> to help expand the sales affiliate network.</p>
-          <p>I also proposed an <strong>AI Agent Workforce</strong> concept, exploring how AI agents could support HR workflows and internal operations — a more innovation-forward direction aiming to move SAW beyond traditional HR software into an AI-enabled workforce platform.</p>
-        </div>
-        <div class="op-deliver">
-          <h4>What I delivered</h4>
-          <ul>
-            <li>Led the full <strong>SAW app redesign</strong> and improved the product experience</li>
-            <li>Designed dashboard modules for <strong>employees, executives &amp; HR teams</strong></li>
-            <li>Planned additional modules including <strong>Welfare</strong> and other HR workflow features</li>
-            <li>Defined product structure, user flow, roadmap &amp; feature priorities</li>
-            <li>Created GTM initiatives new to the team — <strong>content plan, video content &amp; referral program</strong></li>
-            <li>Proposed an <strong>AI Agent Workforce</strong> concept for workflow automation in HR</li>
-            <li>Helped reposition SAW toward a more innovation-driven HR-tech platform</li>
-            <li>Stepped away professionally when the speed of execution and innovation direction were no longer aligned with the team's readiness</li>
-          </ul>
-        </div>
-        <div class="keyach">
-          <h4>Key achievement</h4>
-          <p>Led the transformation of SAW from a standard HR application into a more strategic <strong>HR-tech platform concept</strong> — redesigning the app experience, creating role-based dashboard modules for <strong>employees, executives and HR</strong>, planning new product modules, and introducing GTM initiatives the team had not executed before.</p>
-          <p>I pushed the product direction forward with a high level of speed, innovation and execution ownership. The pace and direction I was driving eventually moved faster than the team's readiness and alignment at that time, so I stepped away to let the team continue at a direction and speed that matched their internal capacity.</p>
-        </div>
-        <div class="case-shots site-shots">
-          <figure class="shot">
-            <div class="browser">
-              <div class="b-bar"><span class="b-dots"><i></i><i></i><i></i></span><span class="b-url">sawhr.com/en/home</span></div>
-              <div class="site-embed">
-                <iframe data-w="1280" src="https://sawhr.com/en/home/" title="SAW HR Application — live product site" loading="lazy" scrolling="no"></iframe>
-                <div class="embed-fallback">Live site preview blocked here<a href="https://sawhr.com/en/home/" target="_blank" rel="noopener">Open sawhr.com ↗</a></div>
-              </div>
-            </div>
-            <figcaption>SAW — HR application (live product)</figcaption>
-          </figure>
-        </div>
-        <div class="op-chips"><span>HR-tech</span><span>Product Strategy</span><span>Roadmap</span><span>Go-to-market</span><span>Operations</span><span>Consulting</span></div>
-      </div></div></div>
-    </article>
-
-    <!-- OP-06 MUANG THAI -->
-    <article class="op open rv">
-      <div class="op-head">
-        <div class="op-code">OP-07<span class="st">Archive</span></div>
-        <div>
-          <h3 class="op-co">Muang Thai Life Assurance</h3>
-          <p class="op-org">One of <b>Thailand's leading life-insurance companies</b>, serving millions of policyholders nationwide.</p>
-          <p class="op-role">Business Analyst · Digital Transformation</p>
-        </div>
-        <span class="op-toggle">+</span>
-      </div>
-      <div class="op-body"><div class="op-body-in"><div class="op-content">
-        <div class="ov">
-          <p>Business Analyst for a large-scale <strong>life insurance digital transformation project</strong>, modernizing legacy workflows from <strong>AS/400</strong> into a newly built platform covering the end-to-end insurance service journey.</p>
-          <p>I worked across multiple modules and business processes, translating complex insurance operations into clear, build-ready requirements — from <strong>case opening, quotation, underwriting, policy servicing, POS, after-sales service and claims-related workflows</strong>.</p>
-          <p>The project required understanding how the legacy AS/400 processes worked, identifying gaps in the existing workflow, redesigning business logic for the new platform, and aligning business users, development teams and stakeholders through delivery.</p>
-        </div>
-        <div class="op-deliver">
-          <h4>What I delivered</h4>
-          <ul>
-            <li>Analyzed legacy <strong>AS/400</strong> workflows and redesigned them for the new platform</li>
-            <li>Worked across multiple insurance modules from <strong>case opening to POS and after-sales service</strong></li>
-            <li>Translated complex insurance rules into clear, build-ready requirements</li>
-            <li>Created <strong>SRS, BRD, API specs</strong>, process flows and requirement documentation</li>
-            <li>Defined business logic for quotation, underwriting, policy servicing &amp; after-sales workflows</li>
-            <li>Supported SIT/UAT and ensured requirements matched real business operations</li>
-            <li>Helped move the organization from manual/legacy processes into a modern digital platform</li>
-          </ul>
-        </div>
-        <div class="keyach">
-          <h4>Key achievement</h4>
-          <p>Helped transform legacy AS/400 insurance workflows into a newly built digital platform covering multiple modules from <strong>case opening to POS and after-sales operations</strong> — translating complex life-insurance processes into clear requirements, system logic, documentation and testable workflows that supported the move from legacy operations into a modernized end-to-end system.</p>
-        </div>
-        <div class="kpi">
-          <h4>KPI highlights</h4>
-          <div class="kpi-grid">
-            <div class="kpi-i"><h5>AS/400 → new platform</h5><p>Supported the migration and redesign of legacy insurance workflows from AS/400 into a newly built digital system.</p></div>
-            <div class="kpi-i"><h5>Multiple modules owned</h5><p>Worked across multiple business modules including <strong>case opening, quotation, underwriting, policy servicing, POS, after-sales and claims-related workflows</strong>.</p></div>
-            <div class="kpi-i"><h5>End-to-end insurance flow</h5><p>Covered the full insurance service journey from front-office case creation through policy operations and post-sale service.</p></div>
-            <div class="kpi-i"><h5>Legacy logic → build-ready requirements</h5><p>Translated complex legacy business rules into clear <strong>SRS, BRD, API specifications</strong>, process flows and testable requirements.</p></div>
-            <div class="kpi-i"><h5>Business + tech alignment</h5><p>Coordinated with business users, development teams and stakeholders to keep requirements, delivery scope and system logic aligned.</p></div>
-          </div>
-        </div>
-        <div class="op-chips"><span>Insurance</span><span>Business Analysis</span><span>Digital Transformation</span><span>AS/400 Migration</span><span>POS</span><span>After-Sales</span><span>SRS / BRD</span><span>UAT</span></div>
-      </div></div></div>
-    </article>
-
-    <!-- OP-07 BRIGHT INTEGRATION -->
-    <article class="op open rv">
-      <div class="op-head">
-        <div class="op-code">OP-08<span class="st">Archive</span></div>
-        <div>
-          <h3 class="op-co">Bright Integration Technology</h3>
-          <p class="op-org">An <b>enterprise software house</b> building large-scale systems for government and corporate clients.</p>
-          <p class="op-role">Project Manager · Business &amp; Data Analyst · Royal Thai Army software project</p>
-        </div>
-        <span class="op-toggle">+</span>
-      </div>
-      <div class="op-body"><div class="op-body-in"><div class="op-content">
-        <div class="ov">
-          <p>Worked as a <strong>Project Manager, Business Analyst and Data Analyst in one role</strong> on a high-level military software project for the <strong>Royal Thai Army</strong> — managing requirements, stakeholders, development coordination, data logic, documentation, testing and delivery.</p>
-          <p>I worked directly with senior military clients, project owners, internal teams, developers, QA and third-party outsource partners to turn complex operational requirements into clear system specifications and deliverable work packages.</p>
-          <p>When I joined, the project had already been delayed for almost <strong>one year</strong>. Within only <strong>2–3 months</strong>, I helped rebuild the working structure, clarify requirements, align stakeholders, coordinate execution and push the project forward until the team could deliver within the project cycle.</p>
-        </div>
-        <div class="op-deliver">
-          <h4>What I delivered</h4>
-          <ul>
-            <li>Served as <strong>Project Manager, Business Analyst and Data Analyst</strong> in one role</li>
-            <li>Managed high-level military clients and security-sensitive project requirements</li>
-            <li>Gathered requirements from senior stakeholders and translated them into clear specifications</li>
-            <li>Coordinated internal teams, developers, QA and third-party outsource partners</li>
-            <li>Designed system logic, database/data structure, process flows and reporting needs</li>
-            <li>Wrote key documentation including <strong>BRD, FSD, SRS</strong>, test cases and user-facing materials</li>
-            <li>Supported <strong>SIT, UAT, sign-off</strong> and delivery coordination</li>
-            <li>Helped recover a project delayed for nearly <strong>one year</strong> and pushed delivery forward within <strong>2–3 months</strong></li>
-            <li>Bridged communication between client, business, technical team and outsource vendors</li>
-            <li>Delivered under strict timelines, complex requirements and high-stakes stakeholder expectations</li>
-          </ul>
-        </div>
-        <div class="keyach">
-          <h4>Key achievement</h4>
-          <p>Took over a high-level military software project that had been delayed for nearly <strong>one year</strong> and helped turn it into a deliverable system within <strong>2–3 months</strong> — acting as <strong>PM, BA and DA in one person</strong>, managing clients, requirements, data logic, internal teams, outsource partners, documentation, testing and delivery end to end.</p>
-        </div>
-        <div class="case-shots">
-          <figure class="shot"><div class="vf" style="border:1px solid var(--line-2)"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br rb"></span><img src="assets/bright-stage.jpg" alt="Ben presenting the joint-intelligence database system on stage" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover" loading="lazy" /></div><figcaption>Presenting the joint-intelligence database system on stage</figcaption></figure>
-          <figure class="shot"><div class="vf" style="border:1px solid var(--line-2)"><span class="br tl"></span><span class="br tr"></span><span class="br bl"></span><span class="br rb"></span><img src="assets/bright-audience.jpg" alt="Workshop participants during the Q&amp;A session" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover" loading="lazy" /></div><figcaption>Intelligence-integration workshop · Hua Hin, Mar 2024</figcaption></figure>
-        </div>
-        <div class="op-chips"><span>Government</span><span>Royal Thai Army</span><span>System Design</span><span>Database Design</span><span>BPMN</span><span>BRD / FSD / SRS</span><span>Dashboards</span><span>SIT / UAT</span></div>
-      </div></div></div>
-    </article>
-
-    <!-- earlier experience -->
-    <div class="subhead rv">Earlier field experience</div>
-    <div class="grid-cards rv">
-      <div class="gcard"><div class="gc-co">Anpie Soft</div><div class="gc-role">Business Analyst &amp; QA</div><div class="gc-d">Software development house. POS-style web systems, news-tracking &amp; construction-management platforms.</div></div>
-      <div class="gcard"><div class="gc-co">Freelance · Shopify</div><div class="gc-role">Project Manager &amp; Product Owner</div><div class="gc-d">Independent e-commerce builds — requirements, store design, launch &amp; client training.</div></div>
-    </div>
-
-    <!-- internships -->
-    <div class="subhead rv" id="internship-mark">Internship Experiences</div>
-    <div class="grid-cards rv">
-      <div class="gcard"><div class="gc-co">Growth Innovation</div><div class="gc-role">Business Analyst · Salesforce</div><div class="gc-d">Salesforce admin/user manuals, data cleansing, UAT import templates &amp; configuration.</div></div>
-      <div class="gcard"><div class="gc-co">Efficient Logistics</div><div class="gc-role">Data Analyst</div><div class="gc-d">Logistics spare-part data; inventory &amp; maintenance optimization with Excel, SQL &amp; Python.</div></div>
-      <div class="gcard"><div class="gc-co">University of Auckland, NZ</div><div class="gc-role">Market Researcher</div><div class="gc-d">Thai market research for ŌKU NZ natural-health products; survey analysis &amp; insight reports.</div></div>
-      <div class="gcard"><div class="gc-co">Syntec Construction PCL</div><div class="gc-role">Business Development</div><div class="gc-d">Real-estate investment: hotel appraisals, IPO/audit summaries &amp; valuation support.</div></div>
-      <div class="gcard"><div class="gc-co">TDS Design &amp; Development</div><div class="gc-role">Purchasing Assistant</div><div class="gc-d">Purchase orders, inventory tracking &amp; materials coordination for construction.</div></div>
-      <div class="gcard"><div class="gc-co">Dulloi Co., Ltd</div><div class="gc-role">Purchasing Assistant</div><div class="gc-d">Supplier quotations, price comparison &amp; cost analysis for materials procurement.</div></div>
-      <div class="gcard"><div class="gc-co">Ruangsan Engineer (TH)</div><div class="gc-role">Accounting Assistant</div><div class="gc-d">Transaction records, financial statements &amp; account reconciliation.</div></div>
+    <div class="os-grid subsys">
+      <article class="os-card rv" data-tilt>
+        <div class="oc-sheen"></div>
+        <div class="oc-particles"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="id">SUB-01</div>
+        <div class="holo holo-atom"><span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span><span class="core"></span><span class="holo-base"></span></div>
+        <h3>AI Researcher</h3>
+        <p>I don’t chase AI trends. I find where intelligence creates measurable business value — then design the solution that solves the real operational problem.</p>
+        <ul><li>AI use-case discovery</li><li>GenAI / LLM products</li><li>Agents · RAG · automation</li><li>Rapid AI prototyping</li></ul>
+      </article>
+      <article class="os-card rv d1" data-tilt>
+        <div class="oc-sheen"></div>
+        <div class="oc-particles"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="id">SUB-02</div>
+        <div class="holo holo-cube"><span class="cf f1"></span><span class="cf f2"></span><span class="cf f3"></span><span class="cf f4"></span><span class="cf f5"></span><span class="cf f6"></span><span class="holo-base"></span></div>
+        <h3>Product Manager</h3>
+        <p>Ideas become products through structure. I translate ambiguity into requirements, roadmaps, priorities and plans teams can actually ship.</p>
+        <ul><li>Product strategy &amp; vision</li><li>Requirement discovery</li><li>Backlog &amp; prioritization</li><li>Module &amp; flow design</li></ul>
+      </article>
+      <article class="os-card rv d2" data-tilt>
+        <div class="oc-sheen"></div>
+        <div class="oc-particles"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="id">SUB-03</div>
+        <div class="holo holo-stack"><span class="pl p1"></span><span class="pl p2"></span><span class="pl p3"></span><span class="beam"></span><span class="holo-base"></span></div>
+        <h3>Digital Transformation</h3>
+        <p>Disconnected systems create friction. I redesign fragmented operations into integrated digital ecosystems that scale and give visibility.</p>
+        <ul><li>Legacy → new platform</li><li>Business &amp; system analysis</li><li>BRD / FSD / SRS · BPMN</li><li>API &amp; data mapping</li></ul>
+      </article>
+      <article class="os-card rv d3" data-tilt>
+        <div class="oc-sheen"></div>
+        <div class="oc-particles"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="id">SUB-04</div>
+        <div class="holo holo-target"><span class="tg t1"></span><span class="tg t2"></span><span class="tg t3"></span><span class="cross"></span><span class="bars"><i></i><i></i><i></i><i></i></span><span class="holo-base"></span></div>
+        <h3>GTM Strategist</h3>
+        <p>A product only matters when people adopt it. I turn shipped solutions into market-ready products through positioning, pricing and growth.</p>
+        <ul><li>Positioning &amp; narrative</li><li>Market &amp; competitor research</li><li>Pricing · unit economics</li><li>Investor &amp; sales enablement</li></ul>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ============================ SKILLS ============================ -->
-<section class="sec" id="skills" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<!-- ============ MISSIONS ============ -->
+<section class="sec" id="missions">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="sh-l">
-        <span class="idx">03 — Skills</span>
-        <h2>Skills &amp; <em>toolkit</em></h2>
-      </div>
-      <div class="sh-r">Strategy-first · research-led<br />AI products · analysis · languages</div>
+      <div><span class="mono">03 — Selected missions</span><h2>Eight <em>missions</em>, shipped.</h2></div>
+      <div class="r"><span class="tap-note">Tap a mission for full details</span></div>
     </div>
-    <div class="arsenal-grid rv">
-      <div class="ars-col">
-        <h4><span class="n">A</span> Product Strategy</h4>
-        <div class="ars-list"><span>Product Strategy</span><span>Product Vision</span><span>Product Roadmap</span><span>Product Ownership</span><span>Go-to-Market (GTM) Strategy</span><span>Backlog &amp; Prioritization</span><span>Requirement Discovery</span><span>Customer Journey Mapping</span><span>OKRs &amp; KPIs</span><span>Stakeholder Management</span></div>
-      </div>
-      <div class="ars-col">
-        <h4><span class="n">B</span> Research &amp; Business Strategy</h4>
-        <div class="ars-list"><span>Market Research</span><span>Competitive Analysis</span><span>SWOT Analysis</span><span>P&amp;L / Unit Economics</span><span>TAM–SAM–SOM Sizing</span><span>Pricing &amp; Business Models</span><span>Opportunity Assessment</span><span>Data-Driven Decisions</span><span>Strategic Storytelling</span></div>
-      </div>
-      <div class="ars-col">
-        <h4><span class="n">C</span> AI Products &amp; Innovation</h4>
-        <div class="ars-list"><span>AI Product Strategy</span><span>AI Use-Case Discovery</span><span>GenAI / LLM Products</span><span>Prompt Engineering</span><span>AI Agents &amp; Chatbots</span><span>RAG &amp; Knowledge Bases</span><span>AI for SME</span><span>AI-Augmented Research</span><span>Rapid AI Prototyping</span><span>No-Code / Vibe Coding</span><span>Automation &amp; Workflow AI</span><span>AI Data Analysis</span><span>AI Ethics &amp; Governance</span><span>AI Roadmapping</span></div>
-      </div>
-      <div class="ars-col">
-        <h4><span class="n">D</span> Analysis, Delivery &amp; Languages</h4>
-        <div class="ars-list"><span>Business &amp; System Analysis</span><span>BRD / FSD / SRS</span><span>BPMN &amp; Flow Design</span><span>API &amp; Data Mapping</span><span>Agile / Scrum</span><span>UAT / SIT</span><span>Power BI · SQL</span><span>Jira · Confluence · Figma</span><span>Thai — Native</span><span>English — Fluent</span></div>
-      </div>
+
+    <div class="missions">
+
+      <!-- M-01 -->
+      <article class="mission rv">
+        <div class="m-head">
+          <div class="m-code">M-01<span class="tag">Active</span></div>
+          <div class="m-title"><h3>CP Axtra · Makro — Retail Digital Transformation</h3><p class="org">The B2B &amp; B2C retail-wholesale arm of CP Group (Makro &amp; Lotus's) — one of Southeast Asia's largest retailers.</p><p class="role">Product Owner · Commercial Hub &amp; Retail Platforms</p></div>
+          <div class="m-kpi"><div class="big">2–3 systems <span>→</span> 1</div><div class="sub">4–5 modules built solo</div></div>
+          <div class="m-tog">+</div>
+        </div>
+        <div class="m-body"><div class="m-body-in"><div class="m-content">
+          <div class="brief">
+            <div class="blk wide"><h4>Mission brief</h4><p>Collapse fragmented item-management, pricing and promotion workflows spread across <strong>2–3 systems</strong> into one centralized platform with connected data, status and tracking.</p></div>
+            <div class="xfade">
+              <div class="xf-pane"><h5>Before</h5><div class="big">Three systems, unsynced data, manual tracking.</div><ul><li>› duplicated entry across systems</li><li>› no end-to-end status visibility</li><li>› workflow logic in people's heads</li></ul></div>
+              <div class="xf-pane xf-after"><h5>After</h5><div class="big">One platform. One flow. One source of status.</div><ul><li>› 4–5 modules delivered stand-alone</li><li>› data + workflow logic unified</li><li>› trackable end-to-end operations</li></ul><input class="xf-range" type="range" min="8" max="92" value="50" aria-label="Before / after" /><div class="xf-handle"></div></div>
+            </div>
+            <div class="blk"><h4>What I built</h4><ul><li>Simple <strong>promotion modules</strong> shipped within my first months</li><li><strong>4–5 platform modules</strong> delivered independently soon after joining</li><li>Large modules: <strong>NPIC Item Registration</strong> and <strong>NPD Item Creation</strong></li><li>Module logic, user flow, data-transformation logic &amp; tracking structure</li><li>Alignment across Thai teams, international teams, users, devs, business &amp; executives</li></ul></div>
+            <div class="blk"><h4>System map</h4><div class="sysmap"><div class="sm-row">
+              <div class="sm-col"><div class="sm-node">Legacy item system</div><div class="sm-node">Pricing sheets</div><div class="sm-node">Promotion tracking</div><div class="sm-node">Manual follow-up</div></div>
+              <div class="sm-arrow"></div>
+              <div class="sm-hub"><b>Commercial Hub</b><span>One centralized platform</span></div>
+            </div></div></div>
+            <div class="blk wide"><h4>KPI highlights</h4><div class="kgrid">
+              <div class="k"><h5>4–5 modules built independently</h5><p>From requirement to module flow, business logic, data transformation, user support and delivery — solo.</p></div>
+              <div class="k"><h5>2–3 systems unified</h5><p>Fragmented workflows and unsynced data replaced by one platform with end-to-end visibility.</p></div>
+              <div class="k"><h5>5+ stakeholder groups aligned</h5><p>Thai and international teams, users, developers, business stakeholders and executives on one direction.</p></div>
+            </div></div>
+          </div>
+          <div class="chips"><span>Retail</span><span>Product Ownership</span><span>Roadmap</span><span>Item Management</span><span>Pricing &amp; Promotion</span><span>Power BI</span><span>SQL</span></div>
+        </div></div></div>
+      </article>
+
+      <!-- M-02 -->
+      <article class="mission rv">
+        <div class="m-head">
+          <div class="m-code">M-02<span class="tag">Award</span></div>
+          <div class="m-title"><h3>KLER · AI Smart Glasses for Elderly Care</h3><p class="org">Built and pitched under ACC Program 3 — ARI Corporate Coaching, National Innovation Agency (NIA) Public Demo Day.</p><p class="role">Product Lead · Positioning, Strategy &amp; Pitch</p></div>
+          <div class="m-kpi"><div class="big">0 <span>→</span> fundable</div><div class="sub">THB 5M pathway · 2nd place</div></div>
+          <div class="m-tog">+</div>
+        </div>
+        <div class="m-body"><div class="m-body-in"><div class="m-content">
+          <div class="brief">
+            <div class="blk wide"><h4>Mission brief</h4><p>Take an unclear AI smart-glasses idea and make it a fundable elderly-care product: positioning, feature logic, business model, roadmap, GTM and investor narrative.</p></div>
+            <div class="xfade">
+              <div class="xf-pane"><h5>Before</h5><div class="big">A hardware idea with no positioning and no business direction.</div><ul><li>› no defined pain point</li><li>› no market or GTM story</li><li>› no investor narrative</li></ul></div>
+              <div class="xf-pane xf-after"><h5>After</h5><div class="big">An investor-ready AI elderly-care platform.</div><ul><li>› 6 core AI features defined</li><li>› roadmap + GTM + funding ask</li><li>› 2nd place · THB 5M pathway</li></ul><input class="xf-range" type="range" min="8" max="92" value="50" aria-label="Before / after" /><div class="xf-handle"></div></div>
+            </div>
+            <div class="blk"><h4>What I built</h4><ul><li>Product direction &amp; positioning from <strong>zero</strong></li><li>Elderly-care pain point, market opportunity &amp; business strategy</li><li>Product narrative, logo direction &amp; pitch positioning</li><li>Roadmap, go-to-market direction &amp; investment ask</li><li>Three pitch rounds + business-strategy Q&amp;A</li></ul></div>
+            <div class="blk"><h4>Modules owned</h4><div class="mods"><span>AI Companion</span><span>KLER Glasses</span><span>Safety AI</span><span>Family Connect</span><span>Navigator</span><span>AI Memory</span></div><p style="margin-top:14px">Six functions that turn a device into a full care ecosystem for older adults — and peace of mind for their families.</p></div>
+            <div class="blk wide"><h4>KPI highlights</h4><div class="kgrid">
+              <div class="k"><h5>0 → investor-ready concept</h5><p>From an unclear idea to a complete platform with positioning, strategy, features, roadmap, GTM and investment narrative.</p></div>
+              <div class="k"><h5>2nd place / 1st Runner-Up</h5><p>Placed 2nd at ACC Program 3 Public Demo Day on product clarity, strategy and storytelling.</p></div>
+              <div class="k"><h5>THB 5M funding pathway</h5><p>NIA-supported fast-track opportunity to apply for THB 5M — beyond idea stage, into fundable innovation.</p></div>
+            </div></div>
+            <div class="blk wide"><h4>Proof</h4><div class="proof">
+              <figure><img src="assets/kler-pitch-c.jpg" alt="Pitching KLER on stage at ACC Program 3 Demo Day" loading="lazy" /><figcaption>Pitching KLER — Demo Day</figcaption></figure>
+              <figure><img src="assets/kler-booth-c.jpg" alt="KLER product booth" loading="lazy" /><figcaption>Product booth</figcaption></figure>
+              <figure><img src="assets/kler-demo-c.jpg" alt="Demoing the KLER AI companion" loading="lazy" /><figcaption>Demoing the AI companion</figcaption></figure>
+              <figure><img src="assets/kler-award-c.jpg" alt="Receiving the 2nd place award" loading="lazy" /><figcaption>2nd place — ACC Program 3</figcaption></figure>
+              <figure><img src="assets/kler-cert-nia.jpg" alt="Receiving the ACC Program 3 certificate from NIA" loading="lazy" /><figcaption>ACC Program 3 certificate — NIA</figcaption></figure>
+            </div></div>
+          </div>
+          <div class="chips"><span>AI Product</span><span>Elderly Care</span><span>Smart Glasses</span><span>Positioning</span><span>GTM</span><span>Investor Pitch</span><span>NIA</span></div>
+        </div></div></div>
+      </article>
+
+      <!-- M-03 -->
+      <article class="mission rv">
+        <div class="m-head">
+          <div class="m-code">M-03<span class="tag">Award</span></div>
+          <div class="m-title"><h3>AI for SME · Lovable Vibe Code Hackathon</h3><p class="org">The first Lovable AI build-hackathon in Thailand — idea to working prototype, live, on stage.</p><p class="role">Founder &amp; Product Lead · Solo build</p></div>
+          <div class="m-kpi"><div class="big">0 <span>→</span> demo in 2h</div><div class="sub">1st Runner-Up</div></div>
+          <div class="m-tog">+</div>
+        </div>
+        <div class="m-body"><div class="m-body-in"><div class="m-content">
+          <div class="brief">
+            <div class="blk wide"><h4>Mission brief</h4><p>Create an original AI business idea for Thai SMEs, build it, and pitch it — alone, in a single afternoon.</p></div>
+            <div class="blk"><h4>What I built</h4><ul><li>The <strong>AI for SME</strong> concept: problem, users, business model</li><li>Product and user flow defined under live time pressure</li><li>A <strong>working prototype in ~2 hours</strong></li><li>The final stage pitch to the judges</li></ul></div>
+            <div class="blk"><h4>KPI highlights</h4><div class="kgrid" style="grid-template-columns:1fr">
+              <div class="k"><h5>1st Runner-Up · 2nd place</h5><p>At Thailand's first Lovable AI Build Hackathon, from idea stage to live prototype and final pitch.</p></div>
+              <div class="k"><h5>100% stand-alone ownership</h5><p>Researched, shaped, designed, built and pitched the idea from scratch — no team.</p></div>
+            </div></div>
+            <div class="blk wide"><h4>Proof</h4><div class="proof">
+              <figure><img src="assets/lovable-event.jpg" alt="Presenting at Lovable Hackathon Thailand finals" loading="lazy" /><figcaption>Finals — presentation &amp; judging</figcaption></figure>
+              <figure><img src="assets/lovable-award.jpg" alt="Receiving the 1st Runner-Up award on stage" loading="lazy" /><figcaption>Receiving 1st Runner-Up</figcaption></figure>
+              <figure><img src="assets/lovable-group.jpg" alt="Lovable Hackathon Thailand group photo" loading="lazy" /><figcaption>Lovable Thailand — cohort</figcaption></figure>
+            </div></div>
+          </div>
+          <div class="chips"><span>AI Product</span><span>Startup</span><span>0 → 1</span><span>Rapid Prototyping</span><span>Pitch</span></div>
+        </div></div></div>
+      </article>
+
+      <!-- M-04 -->
+      <article class="mission rv">
+        <div class="m-head">
+          <div class="m-code">M-04<span class="tag">Consulting</span></div>
+          <div class="m-title"><h3>SAW HR · HR-Tech Redesign + AI Workforce Concept</h3><p class="org">An HR management application building tools for hiring, people ops and workforce management.</p><p class="role">Product Consultant · Redesign, Roadmap &amp; GTM</p></div>
+          <div class="m-kpi"><div class="big">HR app <span>→</span> platform</div><div class="sub">3 role-based dashboards</div></div>
+          <div class="m-tog">+</div>
+        </div>
+        <div class="m-body"><div class="m-body-in"><div class="m-content">
+          <div class="brief">
+            <div class="blk wide"><h4>Mission brief</h4><p>Reposition a standard HR application into a strategic HR-tech platform — product direction, redesign, new modules and a go-to-market motion the team had never run.</p></div>
+            <div class="blk"><h4>What I built</h4><ul><li>The full <strong>SAW app redesign</strong> and product experience</li><li>Dashboard modules for <strong>employees, executives &amp; HR teams</strong></li><li><strong>Welfare module</strong> and further HR workflow features</li><li>Product structure, user flow, roadmap &amp; feature priorities</li><li>GTM initiatives new to the team — content plan, video direction, referral program</li><li>An <strong>AI Agent Workforce</strong> concept for HR workflow automation</li></ul></div>
+            <div class="blk"><h4>Modules owned</h4><div class="mods"><span>Employee dashboard</span><span>Executive dashboard</span><span>HR dashboard</span><span>Welfare</span><span>Referral program</span><span>AI Agent Workforce</span></div><p style="margin-top:14px">I pushed direction and pace hard; when the speed and innovation direction moved beyond the team's readiness, I stepped away professionally so they could continue at their own capacity.</p></div>
+            <div class="blk wide"><h4>Proof</h4>
+              <div class="browser"><div class="b-bar"><span class="b-dots"><i></i><i></i><i></i></span><span class="b-url">sawhr.com/en/home</span></div><div class="site-embed"><iframe src="https://sawhr.com/en/home/" title="SAW HR Application — live product site" loading="lazy" scrolling="no"></iframe></div></div>
+            </div>
+          </div>
+          <div class="chips"><span>HR-tech</span><span>Product Strategy</span><span>Roadmap</span><span>Go-to-market</span><span>AI Agents</span><span>Consulting</span></div>
+        </div></div></div>
+      </article>
+
+      <!-- M-05 -->
+      <article class="mission rv">
+        <div class="m-head">
+          <div class="m-code">M-05<span class="tag">Go-live</span></div>
+          <div class="m-title"><h3>Telehealth Thailand · National Telepharmacy Platform</h3><p class="org">A national telepharmacy platform under the Pharmacy Council of Thailand — patients consult, pay and receive medication online.</p><p class="role">Project Manager · End-to-End Delivery</p></div>
+          <div class="m-kpi"><div class="big">3+ yrs <span>→</span> live</div><div class="sub">In under one year</div></div>
+          <div class="m-tog">+</div>
+        </div>
+        <div class="m-body"><div class="m-body-in"><div class="m-content">
+          <div class="brief">
+            <div class="blk wide"><h4>Mission brief</h4><p>Unblock a national health platform that had been in development for <strong>3+ years</strong> and could only do online consultation — and get the full service journey live.</p></div>
+            <div class="xfade">
+              <div class="xf-pane"><h5>Before</h5><div class="big">Consultation only. Three years, no complete service.</div><ul><li>› no prescription workflow</li><li>› no payment collection</li><li>› no medicine delivery</li></ul></div>
+              <div class="xf-pane xf-after"><h5>After</h5><div class="big">A live, end-to-end national telehealth service.</div><ul><li>› consult → prescribe → pay → deliver</li><li>› 5 core modules connected</li><li>› go-live in &lt;1 year</li></ul><input class="xf-range" type="range" min="8" max="92" value="50" aria-label="Before / after" /><div class="xf-handle"></div></div>
+            </div>
+            <div class="blk"><h4>What I built</h4><ul><li>Project plan, critical path &amp; execution structure as <strong>Project Manager</strong></li><li>Workflows for <strong>medicine fulfillment, payment collection &amp; delivery</strong></li><li>Cross-functional coordination — product, operations, pharmacy, technical</li><li>Launch-critical prioritization and blocker removal</li><li>PO-level planning across <strong>5 core modules</strong> and their dependencies</li></ul></div>
+            <div class="blk"><h4>System map</h4><div class="sysmap"><div class="sm-row">
+              <div class="sm-col"><div class="sm-node on">Consultation</div><div class="sm-node on">Prescription</div><div class="sm-node on">Payment</div><div class="sm-node on">Delivery</div><div class="sm-node on">Case close</div></div>
+              <div class="sm-arrow"></div>
+              <div class="sm-hub"><b>Go-live</b><span>End-to-end journey</span></div>
+            </div></div></div>
+            <div class="blk wide"><h4>KPI highlights</h4><div class="kgrid">
+              <div class="k"><h5>3+ years delayed → live in &lt;1 year</h5><p>Took ownership and brought the platform from consultation-only to a complete healthcare service in under a year.</p></div>
+              <div class="k"><h5>5 core modules managed</h5><p>Aligned requirements, dependencies, user flows and timelines so every module connected into one journey.</p></div>
+              <div class="k"><h5>Development → real operation</h5><p>Built the execution structure that moved the service out of build mode and into the real market.</p></div>
+            </div></div>
+            <div class="blk wide"><h4>Proof</h4>
+              <div class="browser"><div class="b-bar"><span class="b-dots"><i></i><i></i><i></i></span><span class="b-url">telehealththailand.vercel.app</span></div><div class="site-embed"><iframe src="https://telehealththailand.vercel.app/" title="Telehealth Thailand — live national platform" loading="lazy" scrolling="no"></iframe></div></div>
+            </div>
+          </div>
+          <div class="chips"><span>Health-tech</span><span>Partner Integration</span><span>PRD</span><span>API Mapping</span><span>eKYC</span><span>Payment Gateway</span><span>Go-live</span></div>
+        </div></div></div>
+      </article>
+
+      <!-- M-06 -->
+      <article class="mission rv">
+        <div class="m-head">
+          <div class="m-code">M-06<span class="tag">Fintech</span></div>
+          <div class="m-title"><h3>SS&amp;C Technologies · HiTrust Fund Platform</h3><p class="org">A NASDAQ-listed global fintech &amp; fund-administration software firm — clients include MUFG and State Street.</p><p class="role">Business System Analyst · HiTrust</p></div>
+          <div class="m-kpi"><div class="big">Requirement <span>→</span> production</div><div class="sub">NAV · settlement · new modules</div></div>
+          <div class="m-tog">+</div>
+        </div>
+        <div class="m-body"><div class="m-body-in"><div class="m-content">
+          <div class="brief">
+            <div class="blk wide"><h4>Mission brief</h4><p>Business System Analyst for <strong>HiTrust</strong>, a global fund-management platform serving international financial clients including <strong>MUFG and State Street</strong> — translating complex financial requirements into system logic, module specifications and delivery-ready documentation.</p></div>
+            <div class="blk"><h4>What I built</h4><ul><li>Direct communication with international clients and global stakeholders</li><li>Module design and <strong>new system capabilities</strong> the platform had not supported before</li><li>Analysis of fund workflows: <strong>NAV, fees, settlement, valuation, fund operations</strong></li><li><strong>BRD, CID &amp; SOW</strong> and implementation documentation for sign-off</li><li>Settlement cycles (T+1 / T+2), rounding logic &amp; parameter setup</li><li>SIT/UAT leadership, calculation validation and production release support</li></ul></div>
+            <div class="blk"><h4>Key achievement</h4><p>Supported international client delivery by designing new system modules, proposing product enhancements and turning complex financial requirements into commercially valuable solutions — strengthening client confidence and <strong>supporting a high-value deal opportunity</strong> for the business.</p></div>
+            <div class="blk wide"><h4>KPI highlights</h4><div class="kgrid">
+              <div class="k"><h5>Global client communication</h5><p>Worked directly with international clients and stakeholders across complex fintech and fund-management workflows.</p></div>
+              <div class="k"><h5>New modules proposed</h5><p>Designed modules and workflow improvements that expanded what the platform could support.</p></div>
+              <div class="k"><h5>Requirement → production</h5><p>Owned analysis end to end — discovery, BRD/CID/SOW, logic design, SIT/UAT and release support.</p></div>
+            </div></div>
+          </div>
+          <div class="chips"><span>Fintech</span><span>Fund Management</span><span>BRD</span><span>Settlement</span><span>NAV</span><span>SIT / UAT</span><span>MUFG</span><span>State Street</span></div>
+        </div></div></div>
+      </article>
+
+      <!-- M-07 -->
+      <article class="mission rv">
+        <div class="m-head">
+          <div class="m-code">M-07<span class="tag">Enterprise</span></div>
+          <div class="m-title"><h3>Muang Thai Life Assurance · AS/400 to New Platform</h3><p class="org">One of Thailand's leading life-insurance companies, serving millions of policyholders nationwide.</p><p class="role">Business Analyst · Digital Transformation</p></div>
+          <div class="m-kpi"><div class="big">AS/400 <span>→</span> new platform</div><div class="sub">End-to-end insurance journey</div></div>
+          <div class="m-tog">+</div>
+        </div>
+        <div class="m-body"><div class="m-body-in"><div class="m-content">
+          <div class="brief">
+            <div class="blk wide"><h4>Mission brief</h4><p>Business Analyst on a large-scale life-insurance <strong>digital transformation</strong> — modernizing legacy <strong>AS/400</strong> workflows into a newly built platform covering the end-to-end insurance service journey.</p></div>
+            <div class="blk"><h4>What I built</h4><ul><li>Analysis of legacy AS/400 workflows and redesign for the new platform</li><li>Coverage across <strong>case opening, quotation, underwriting, policy servicing, POS, after-sales and claims-related workflows</strong></li><li><strong>SRS, BRD, API specs</strong>, process flows and requirement documentation</li><li>Business logic for quotation, underwriting, policy servicing &amp; after-sales</li><li>SIT/UAT support to keep requirements matched to real operations</li></ul></div>
+            <div class="blk"><h4>Key achievement</h4><p>Helped transform legacy AS/400 insurance workflows into a newly built digital platform across multiple modules — turning complex life-insurance processes into clear requirements, system logic, documentation and testable workflows that carried the organization from legacy operations into a modern end-to-end system.</p></div>
+            <div class="blk wide"><h4>KPI highlights</h4><div class="kgrid">
+              <div class="k"><h5>Multiple modules owned</h5><p>Case opening, quotation, underwriting, policy servicing, POS, after-sales and claims-related workflows.</p></div>
+              <div class="k"><h5>Legacy logic → build-ready specs</h5><p>Complex legacy rules translated into SRS, BRD, API specifications, process flows and testable requirements.</p></div>
+              <div class="k"><h5>Business + tech alignment</h5><p>Coordinated business users, development teams and stakeholders to keep scope and system logic aligned.</p></div>
+            </div></div>
+          </div>
+          <div class="chips"><span>Insurance</span><span>Business Analysis</span><span>Digital Transformation</span><span>AS/400 Migration</span><span>POS</span><span>After-Sales</span><span>SRS / BRD</span><span>UAT</span></div>
+        </div></div></div>
+      </article>
+
+      <!-- M-08 -->
+      <article class="mission rv">
+        <div class="m-head">
+          <div class="m-code">M-08<span class="tag">Recovery</span></div>
+          <div class="m-title"><h3>Bright Integration · Royal Thai Army Software Project</h3><p class="org">An enterprise software house building large-scale systems for government and corporate clients.</p><p class="role">Project Manager · Business Analyst · Data Analyst — one role</p></div>
+          <div class="m-kpi"><div class="big">1 yr late <span>→</span> 2–3 mo</div><div class="sub">Delivery recovered</div></div>
+          <div class="m-tog">+</div>
+        </div>
+        <div class="m-body"><div class="m-body-in"><div class="m-content">
+          <div class="brief">
+            <div class="blk wide"><h4>Mission brief</h4><p>Rescue a security-sensitive military software project already delayed nearly <strong>one year</strong> — while acting as PM, BA and DA simultaneously.</p></div>
+            <div class="blk"><h4>What I built</h4><ul><li>A rebuilt working structure, clarified requirements and stakeholder alignment</li><li>System logic, database/data structure, process flows and reporting needs</li><li><strong>BRD, FSD, SRS</strong>, test cases and user-facing materials</li><li>Coordination across internal teams, developers, QA and outsource partners</li><li><strong>SIT, UAT, sign-off</strong> and delivery coordination</li></ul></div>
+            <div class="blk"><h4>KPI highlights</h4><div class="kgrid" style="grid-template-columns:1fr">
+              <div class="k"><h5>~1 year delayed → delivered in 2–3 months</h5><p>Recovered the project cycle by rebuilding requirements, structure and execution rhythm.</p></div>
+              <div class="k"><h5>3 roles, one person</h5><p>PM, BA and DA at once — clients, requirements, data logic, vendors, docs, testing and delivery.</p></div>
+            </div></div>
+            <div class="blk wide"><h4>Proof</h4><div class="proof">
+              <figure><img src="assets/bright-stage.jpg" alt="Presenting the joint-intelligence database system on stage" loading="lazy" /><figcaption>Presenting the system on stage</figcaption></figure>
+              <figure><img src="assets/bright-audience.jpg" alt="Workshop participants during Q&amp;A" loading="lazy" /><figcaption>Integration workshop · Hua Hin, 2024</figcaption></figure>
+            </div></div>
+          </div>
+          <div class="chips"><span>Government</span><span>System Design</span><span>Database Design</span><span>BPMN</span><span>BRD / FSD / SRS</span><span>SIT / UAT</span></div>
+        </div></div></div>
+      </article>
+
     </div>
   </div>
 </section>
 
-<!-- ============================ EDUCATION ============================ -->
-<section class="sec" id="edu">
+<!-- ============ CAPABILITY ============ -->
+<section class="sec alt" id="capability">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="sh-l">
-        <span class="idx">04 — Training history</span>
-        <h2>Education</h2>
-      </div>
-      <div class="sh-r">Records verified</div>
+      <div><span class="mono">04 — Capability index</span><h2>The <em>toolkit</em>, mapped.</h2></div>
     </div>
-    <div class="edu-stack">
-      <div class="edu-card rv">
-        <div>
-          <span class="status">In Progress</span>
-          <div class="uni" style="margin-top:16px">University of the Thai Chamber of Commerce</div>
-          <div class="deg">Master's Degree — <em>AI MBA (Business Administration in Artificial Intelligence)</em></div>
-        </div>
-        <div class="edu-honors">
-          <div class="hl">Focus</div>
-          <div class="hv">AI &amp; Business</div>
-          <div class="hg">Currently studying · UTCC</div>
-        </div>
-      </div>
-      <div class="edu-card rv d1">
-        <div>
-          <div class="uni">Assumption University of Thailand</div>
-          <div class="deg">Bachelor of Business Economics — <em>Concentration in Data Analytics</em></div>
-        </div>
-        <div class="edu-honors">
-          <div class="hl">Honors</div>
-          <div class="hv">Summa Cum Laude</div>
-          <div class="hg">GPA 3.89 / 4.00</div>
-        </div>
-      </div>
-      <div class="edu-card rv d2">
-        <div>
-          <span class="status">Selected · 2026</span>
-          <div class="uni" style="margin-top:16px">NIA Academy · ARI Corporate Coaching (ACC Program 3)</div>
-          <div class="deg">National Innovation Agency (NIA), Ministry of Higher Education, Science, Research &amp; Innovation — <em>bridging AI skills to real-world deployment, funding &amp; global growth</em></div>
-        </div>
-        <div class="edu-honors">
-          <div class="hl">Track</div>
-          <div class="hv">AI Tech Talent</div>
-          <div class="hg">CCC Academy × NIA</div>
-        </div>
-      </div>
-      <div class="edu-card rv d2">
-        <div>
-          <div class="uni">JMAT · Marketing Association of Thailand</div>
-          <div class="deg">J-MAT Award Camp — <em>Generation 23 · marketing training program</em><br />Gen-Z marketing plan &amp; competitor analysis for an Ocean Life campaign.</div>
-        </div>
-        <div class="edu-honors">
-          <div class="hl">Program</div>
-          <div class="hv">Marketing Trainee</div>
-          <div class="hg">Generation 23</div>
-        </div>
-      </div>
+    <div class="constel rv" id="constel">
+      <canvas id="constelCv"></canvas>
+      <div class="cn-labels" id="constelLabels"></div>
+    </div>
+    <div class="sk-fallback rv">
+      <div class="sk-col"><h4><span class="n">A</span> Product Strategy</h4><div class="sk-list"><span>Product Strategy</span><span>Roadmap &amp; Ownership</span><span>GTM Strategy</span><span>Requirement Discovery</span><span>OKRs &amp; KPIs</span></div></div>
+      <div class="sk-col"><h4><span class="n">B</span> Research &amp; Business</h4><div class="sk-list"><span>Market Research</span><span>Competitive Analysis</span><span>TAM–SAM–SOM</span><span>Pricing &amp; Models</span><span>Strategic Storytelling</span></div></div>
+      <div class="sk-col"><h4><span class="n">C</span> AI &amp; Innovation</h4><div class="sk-list"><span>AI Product Strategy</span><span>GenAI / LLM Products</span><span>AI Agents &amp; RAG</span><span>Rapid AI Prototyping</span><span>Workflow Automation</span></div></div>
+      <div class="sk-col"><h4><span class="n">D</span> Delivery &amp; Craft</h4><div class="sk-list"><span>Business &amp; System Analysis</span><span>BRD / FSD / SRS</span><span>BPMN &amp; Flow Design</span><span>API &amp; Data Mapping</span><span>Power BI · SQL</span><span>Thai — Native</span><span>English — Fluent</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- ============================ CONTACT ============================ -->
-<section class="sec contact" id="contact">
+<!-- ============ RECORD ============ -->
+<section class="sec" id="record">
   <div class="wrap">
-    <span class="lbl-line rv" style="justify-content:center">05 — Contact me</span>
-    <h2 class="rv d1" style="margin-top:20px">Ben is <em>available<br />for consulting.</em></h2>
-    <p class="sub rv d2">Freelance &amp; project-based consulting — product strategy, ownership, system analysis and business development. From the first idea to the live release, I can carry it.</p>
-    <a class="btn btn-primary cta rv d2" href="mailto:Benrujirach@gmail.com">Contact me <span class="arw">↗</span></a>
-
-    <div class="contact-links rv d3">
-      <a href="mailto:Benrujirach@gmail.com"><span class="cl">Email</span><span class="cv">Benrujirach@gmail.com</span></a>
-      <a href="tel:0958471554"><span class="cl">Phone</span><span class="cv">095 847 1554</span></a>
-      <a href="https://www.linkedin.com/in/rujirachkanjarin/" target="_blank" rel="noopener"><span class="cl">LinkedIn</span><span class="cv">/rujirachkanjarin</span></a>
-      <div class="ci ci-line"><span class="cl">Line</span><img class="line-qr-c" src="assets/line-qr.jpg" alt="LINE QR code — scan to add Ben on LINE" /><span class="cv-cap">Scan to add me</span></div>
+    <div class="sec-head rv">
+      <div><span class="mono">05 — Training record</span><h2>Education &amp; <em>programs</em>.</h2></div>
+    </div>
+    <div class="edu">
+      <div class="edu-row rv"><div><div class="uni">University of the Thai Chamber of Commerce</div><div class="deg">Master's — AI MBA (Business Administration in Artificial Intelligence) · in progress</div></div><div><div class="hv">AI &amp; Business</div><div class="hg">Currently studying</div></div></div>
+      <div class="edu-row rv d1"><div><div class="uni">Assumption University of Thailand</div><div class="deg">Bachelor of Business Economics — concentration in Data Analytics</div></div><div><div class="hv">Summa Cum Laude</div><div class="hg">GPA 3.89 / 4.00</div></div></div>
+      <div class="edu-row rv d2"><div><div class="uni">NIA Academy · ARI Corporate Coaching (ACC Program 3)</div><div class="deg">National Innovation Agency — bridging AI skills to real-world deployment, funding &amp; global growth</div></div><div><div class="hv">AI Tech Talent</div><div class="hg">Selected · 2026</div></div></div>
+      <div class="edu-row rv d3"><div><div class="uni">JMAT · Marketing Association of Thailand</div><div class="deg">J-MAT Award Camp, Generation 23 — Gen-Z marketing plan &amp; competitor analysis</div></div><div><div class="hv">Marketing Trainee</div><div class="hg">Generation 23</div></div></div>
     </div>
   </div>
-
-  <footer class="wrap">
-    <div class="foot">
-      <span class="fb">Ben · Rujirach Kanjarin</span>
-      <span>Product Ops // Dossier R-2727</span>
-      <a href="#top">Back to top ↑</a>
-    </div>
-  </footer>
 </section>
 
-<!-- sticky hire pill -->
-<div class="hire-pill">
-  <img class="hp-av" src="assets/ben-mug-color.jpg" alt="Ben" />
-  <span class="hp-t"><b>Ben</b> is available for consulting</span>
-  <a class="hp-btn" href="#contact">Contact Ben</a>
-  <button class="hp-x" aria-label="Dismiss">✕</button>
-</div>
+<!-- ============ CONTACT ============ -->
+<section class="sec alt" id="contact">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="mono">06 — Contact</span><h2>Let’s <em>build</em> something.</h2></div>
+    </div>
+    <div class="finale rv">
+      <div class="fin-left">
+        <canvas class="ecg" id="ecg" aria-hidden="true"></canvas>
+        <div class="fin-status">
+          <span class="on"><i class="pulse"></i>System status : online</span>
+          <span>Operator available</span>
+          <span class="dim">Awaiting incoming mission…</span>
+        </div>
+      </div>
+      <div class="fin-cards">
+        <a class="fin-card" href="tel:0958471554"><span class="badge">Tel</span><span class="k">Phone</span><span class="v">095 847 1554</span></a>
+        <a class="fin-card" href="https://www.linkedin.com/in/rujirachkanjarin/" target="_blank" rel="noopener"><span class="badge">in</span><span class="k">LinkedIn</span><span class="v">/rujirachkanjarin</span></a>
+        <a class="fin-card mail" href="mailto:Benrujirach@gmail.com"><span class="arw">↗</span><span class="k">Email</span><span class="v">Benrujirach<br />@gmail.com</span></a>
+      </div>
+    </div>
+    <button class="reboot" id="reboot"><span class="pulse"></span> Reboot system — back to start</button>
+    <div class="foot"><a href="#top">Back to top ↑</a></div>
+  </div>
+</section>
 
-<script src="js/dossier.js"></script>
-<script src="js/i18n.js"></script>
+<script src="js/benos.js"></script>
 </body>
 </html>
